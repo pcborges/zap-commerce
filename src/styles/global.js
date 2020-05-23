@@ -1,8 +1,27 @@
-/* Box sizing rules */
+import { createGlobalStyle } from "styled-components";
+
+export const Global = createGlobalStyle`
+  /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 62.5%;
+  color: #3e3731;
+}
+
+body {
+  font-size: 1.4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* Remove default padding */
@@ -27,14 +46,6 @@ blockquote,
 dl,
 dd {
   margin: 0;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -81,3 +92,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
+`;
+
+export default Global;
