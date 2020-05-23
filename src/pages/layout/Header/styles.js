@@ -26,6 +26,16 @@ export const Logo = styled.a`
 `;
 
 export const MenuItens = styled.div`
+  svg {
+    stroke: ${colors.orange};
+    fill: ${colors.orange};
+
+    &:hover {
+      fill: black;
+      stroke: black;
+    }
+  }
+
   li {
     display: inline;
   }

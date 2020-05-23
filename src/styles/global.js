@@ -92,6 +92,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.react-icons {
+  vertical-align: middle;
+}
 `;
 
 export default Global;

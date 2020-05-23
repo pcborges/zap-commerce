@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Navigation, Logo, MenuItens } from "./styles";
 import logo_url from "../../../logo.svg";
+import { GoSettings } from "react-icons/go";
 
 export default function Header() {
   return (
@@ -11,11 +12,8 @@ export default function Header() {
           <span>ZapCommerce</span>
         </Logo>
         <MenuItens>
-          <button>
-            <clr-icon shape="ellipsis-horizontal" size="24"></clr-icon>
-          </button>
+          <GoSettings size={20} />
         </MenuItens>
-        <clr-icon shape="cog" size="24"></clr-icon>
       </Navigation>
     </Container>
   );
