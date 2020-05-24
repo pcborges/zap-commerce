@@ -25,29 +25,22 @@ export const Header = styled.div`
     border-radius: 12.5px;
     text-align: center;
     font-weight: 500;
+  }
 
-    .orange {
-      background-color: ${colors.orange};
-      color: white;
-    }
+  .orange {
+    background-color: ${colors.orange};
+    color: white;
+  }
 
-    .blue {
-      background-color: ${colors.blue};
-      color: white;
-    }
+  .blue {
+    background-color: ${colors.blue};
+    color: white;
   }
 `;
 
 export const Content = styled.div`
   display: flex;
   padding-left: 10px;
-
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    align-self: flex-start;
-  }
 `;
 
 export const Description = styled.div`
@@ -64,4 +57,21 @@ export const Title = styled.div`
   font-size: 1.2rem;
   padding-left: 8px;
   padding-right: 5px;
+`;
+
+export const Button = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+
+  svg {
+    fill: ${colors.primary};
+    stroke: ${colors.primary};
+
+    &:hover {
+      fill: ${colors.orange};
+      stroke: ${colors.orange};
+    }
+  }
 `;

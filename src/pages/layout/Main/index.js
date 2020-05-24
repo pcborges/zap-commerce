@@ -28,6 +28,7 @@ export default function Main() {
       price: 3.84,
       unit: "kg",
       imgPath: "/images/apple.png",
+      badge: "Frutas",
     },
     {
       id: 4,
@@ -43,7 +44,7 @@ export default function Main() {
     <Container>
       <Cards>
         {items.map((item) => {
-          return <Card item={item} badge={true} key={item.id} />;
+          return <Card item={item} badge={item.badge} key={item.id} />;
         })}
       </Cards>
     </Container>
