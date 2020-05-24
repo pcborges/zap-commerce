@@ -1,3 +1,4 @@
+import styled from "styled-components";
 export const colors = {
   primary: "#ff9d43",
   grey: "#f9f8f8",
@@ -6,3 +7,8 @@ export const colors = {
   mediumGrey: "#e0e0e0",
   blue: "#50c1ef",
 };
+
+export const Container = styled.div`
+  max-width: 996px;
+  margin: 0 auto;
+`;
