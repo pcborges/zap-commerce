@@ -27,12 +27,12 @@ export const Logo = styled.a`
 
 export const MenuItens = styled.div`
   svg {
-    stroke: ${colors.orange};
-    fill: ${colors.orange};
+    stroke: ${colors.dark};
+    fill: ${colors.dark};
 
     &:hover {
-      fill: black;
-      stroke: black;
+      fill: ${colors.primary};
+      stroke: ${colors.primary};
     }
   }
 
@@ -49,5 +49,15 @@ export const MenuItens = styled.div`
     text-align: center;
     padding-bottom: 5px;
     background-color: #fff;
+    margin-left: 0.5rem;
+
+    &:active {
+      border: none;
+    }
+  }
+
+  .featured {
+    border: none;
+    background-color: #fee6a7;
   }
 `;

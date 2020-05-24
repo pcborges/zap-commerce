@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Navigation, Logo, MenuItens } from "./styles";
 import logo_url from "../../../logo.svg";
 import { GoSettings } from "react-icons/go";
+import { RiMoreLine } from "react-icons/ri";
 
 export default function Header() {
   return (
@@ -12,7 +13,12 @@ export default function Header() {
           <span>ZapCommerce</span>
         </Logo>
         <MenuItens>
-          <GoSettings size={20} />
+          <button>
+            <RiMoreLine size={20} />
+          </button>
+          <button className="featured">
+            <GoSettings size={20} />
+          </button>
         </MenuItens>
       </Navigation>
     </Container>

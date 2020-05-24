@@ -93,7 +93,7 @@ select {
   }
 }
 
-.react-icons {
+svg {
   vertical-align: middle;
 }
 `;
