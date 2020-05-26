@@ -1,10 +1,10 @@
-#ZapCommerce
+# ZapCommerce
 
-##Descrição
+## Descrição
 
 Projeto criado para ajudar pequenos empreendedores que efetuam suas vendas por Whatsapp, criando uma loja virtual simples, em que o checkout envia a lista de produtos diretamente no whatsapp do empreendedor.
 
-##Techs
+## Techs
 
 - Javascript
 - ReactJS
@@ -12,9 +12,10 @@ Projeto criado para ajudar pequenos empreendedores que efetuam suas vendas por W
 - HTML 5
 - CSS 3
 
-##Como Executar
+## Como Executar
 
-##Todo List
-[ ] Estrutuar Layout Básico Mobile
-[ ] Criar Componentes Visuais Iniciais
-[ ] Estruturar Layout Desktop
+## Todo List
+
+[] Estrutuar Layout Básico Mobile
+[] Criar Componentes Visuais Iniciais
+[] Estruturar Layout Desktop
