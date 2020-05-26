@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Container, Navigation } from "./styles";
 import {
   RiStore2Line,
@@ -11,20 +12,20 @@ export default function Footer() {
   return (
     <Container>
       <Navigation>
-        <li className="active">
+        <Link to="/" className="active">
           <RiStore2Line size={26} />
-        </li>
-        <li>
+        </Link>
+        <Link to="/">
           <RiSearch2Line size={26} />
-        </li>
-        <li>
+        </Link>
+        <Link to="/produtos">
           <RiAddCircleLine size={26} />
-        </li>
-        <li>
+        </Link>
+        <Link to="/">
           <Button>
             <RiShoppingBagLine size={20} /> 2 itens
           </Button>
-        </li>
+        </Link>
       </Navigation>
     </Container>
   );

@@ -1,20 +1,20 @@
 import React from "react";
-import { Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import GlobalStyles from "./styles/global";
 import { Container } from "./styles/theme";
 import Header from "./components/layout/Header";
-import SubHeader from "./components/layout/SubHeader";
-import Main from "./components/layout/Main/Main";
+import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
+
+import Routes from "./routes";
 
 function App() {
   return (
     <Router>
       <Container>
         <Header />
-        <SubHeader />
         <Main>
-          <div> Patrick </div>
+          <Routes />
         </Main>
         <Footer />
         <GlobalStyles />

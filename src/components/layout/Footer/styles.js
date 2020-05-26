@@ -7,7 +7,7 @@ export const Container = styled.footer`
   z-index: 999;
 `;
 
-export const Navigation = styled.ul`
+export const Navigation = styled.div`
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -17,8 +17,9 @@ export const Navigation = styled.ul`
   border-radius: 35px 35px 0px 0px;
   padding: 0.01em 1.2rem !important;
 
-  li {
+  a {
     cursor: pointer;
+    color: ${colors.dark};
 
     &:hover {
       svg {
