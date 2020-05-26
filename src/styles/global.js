@@ -16,9 +16,6 @@ html {
 
 body {
   font-size: 1.4rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;

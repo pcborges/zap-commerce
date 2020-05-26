@@ -12,6 +12,7 @@ export default function Main() {
       price: 4.49,
       unit: "kg",
       imgPath: "/images/banana.png",
+      badge: "Top",
     },
     {
       id: 2,

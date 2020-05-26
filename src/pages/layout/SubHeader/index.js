@@ -7,19 +7,19 @@ export default function SubHeader() {
       <Categories>
         <ul className="category-list">
           <li className="active">
-            <a href="#">Todas</a>
+            <a href="/teste">Todas</a>
           </li>
           <li>
-            <a href="#">Frutas</a>
+            <a href="/teste">Frutas</a>
           </li>
           <li>
-            <a href="#">Hortaliças/Folhagens</a>
+            <a href="/teste">Hortaliças/Folhagens</a>
           </li>
           <li>
-            <a href="#">Verduras</a>
+            <a href="/teste">Verduras</a>
           </li>
           <li>
-            <a href="#">Legumes</a>
+            <a href="/teste">Legumes</a>
           </li>
         </ul>
       </Categories>

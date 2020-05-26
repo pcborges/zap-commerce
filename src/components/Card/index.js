@@ -15,7 +15,7 @@ export default function Card(props) {
   return (
     <Container>
       <Header>
-        {badge && <span class="badge orange">{badge}</span>}
+        {badge && <span className="badge orange">{badge}</span>}
         <img src={item.imgPath} alt={item.name} />
       </Header>
       <Title>{item.name}</Title>
@@ -29,7 +29,7 @@ export default function Card(props) {
             | {item.unit}
           </span>
         </Description>
-        <Button>
+        <Button type="button">
           <BsPlusCircle size={30} />
         </Button>
       </Content>

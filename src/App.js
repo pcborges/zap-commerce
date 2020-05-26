@@ -4,6 +4,7 @@ import { Container } from "./styles/theme";
 import Header from "./pages/layout/Header";
 import SubHeader from "./pages/layout/SubHeader";
 import Main from "./pages/layout/Main";
+import Footer from "./pages/layout/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <SubHeader />
       <Main />
+      <Footer />
       <GlobalStyles />
     </Container>
   );

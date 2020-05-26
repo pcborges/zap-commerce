@@ -11,4 +11,7 @@ export const colors = {
 export const Container = styled.div`
   max-width: 996px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 `;
