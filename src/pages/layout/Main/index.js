@@ -1,50 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Cards } from "./styles";
+import { productList } from "../../../services/api";
 
 import Card from "../../../components/Card";
 
 export default function Main() {
-  const items = [
-    {
-      id: 1,
-      name: "Banana",
-      category: "Frutas",
-      price: 4.49,
-      unit: "kg",
-      imgPath: "/images/banana.png",
-      badge: "Top",
-    },
-    {
-      id: 2,
-      name: "Morango",
-      category: "Frutas",
-      price: 9.84,
-      unit: "kg",
-      imgPath: "/images/strawberry.png",
-    },
-    {
-      id: 3,
-      name: "Maça",
-      category: "Frutas",
-      price: 3.84,
-      unit: "kg",
-      imgPath: "/images/apple.png",
-      badge: "Frutas",
-    },
-    {
-      id: 4,
-      name: "Laranja",
-      category: "Frutas",
-      price: 4.84,
-      unit: "kg",
-      imgPath: "/images/orange.png",
-    },
-  ];
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    function loadProducts() {
+      const data = productList();
+      setProducts(data);
+    }
 
+    loadProducts();
+  }, []);
   return (
     <Container>
       <Cards>
-        {items.map((item) => {
+        {products.map((item) => {
           return <Card item={item} badge={item.badge} key={item.id} />;
         })}
       </Cards>
