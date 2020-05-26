@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Container, Navigation } from "./styles";
 import {
   RiStore2Line,
@@ -8,7 +8,6 @@ import {
 } from "react-icons/ri";
 
 export default function Footer() {
-  const [items, setItems] = useState(1);
   return (
     <Container>
       <Navigation>
@@ -23,7 +22,7 @@ export default function Footer() {
         </li>
         <li>
           <Button>
-            <RiShoppingBagLine size={20} /> {items} itens
+            <RiShoppingBagLine size={20} /> 2 itens
           </Button>
         </li>
       </Navigation>
