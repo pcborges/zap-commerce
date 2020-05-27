@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Navigation } from "./styles";
 import {
@@ -8,7 +8,9 @@ import {
   RiAddCircleLine,
 } from "react-icons/ri";
 
+import ShopContext from "../../../context/shop-context";
 export default function Footer() {
+  const { cart } = useContext(ShopContext);
   return (
     <Container>
       <Navigation>
@@ -23,7 +25,8 @@ export default function Footer() {
         </Link>
         <Link to="/">
           <Button>
-            <RiShoppingBagLine size={20} /> 2 itens
+            <RiShoppingBagLine size={20} /> {cart.length}{" "}
+            {cart.length > 1 ? "itens" : "item"}
           </Button>
         </Link>
       </Navigation>
