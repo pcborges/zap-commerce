@@ -18,8 +18,8 @@ export default function Products() {
     <>
       <SubHeader />
       <Cards>
-        {products.map((item) => {
-          return <Card item={item} badge={item.badge} key={item.id} />;
+        {products.map((item, index) => {
+          return <Card item={item} badge={item.badge} key={index} />;
         })}
       </Cards>
     </>

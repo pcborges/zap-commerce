@@ -18,4 +18,4 @@ Projeto criado para ajudar pequenos empreendedores que efetuam suas vendas por W
 
 - [x] Estrutuar Layout Básico Mobile
 - [x] Criar Componentes Visuais Iniciais
-- [] Estruturar Layout Desktop
+- [ ] Estruturar Layout Desktop

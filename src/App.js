@@ -7,19 +7,22 @@ import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
 
 import Routes from "./routes";
+import GlobalState from "./context/GlobalState";
 
 function App() {
   return (
-    <Router>
-      <Container>
-        <Header />
-        <Main>
-          <Routes />
-        </Main>
-        <Footer />
-        <GlobalStyles />
-      </Container>
-    </Router>
+    <GlobalState>
+      <Router>
+        <Container>
+          <Header />
+          <Main>
+            <Routes />
+          </Main>
+          <Footer />
+          <GlobalStyles />
+        </Container>
+      </Router>
+    </GlobalState>
   );
 }
 
