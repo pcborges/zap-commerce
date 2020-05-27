@@ -23,7 +23,7 @@ export default function Footer() {
         <Link to="/produtos">
           <RiAddCircleLine size={26} />
         </Link>
-        <Link to="/">
+        <Link to="/carrinho">
           <Button>
             <RiShoppingBagLine size={20} /> {cart.length}{" "}
             {cart.length > 1 ? "itens" : "item"}
