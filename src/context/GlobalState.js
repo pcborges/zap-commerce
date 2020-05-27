@@ -2,9 +2,11 @@ import React, { useReducer } from "react";
 
 import ShopContext from "./shop-context";
 import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./reducers";
+import { productList } from "../services/api";
 
 export default function GlobalState(props) {
-  const products = [];
+  const products = productList();
+
   const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
 
   const addProductToCart = (product) => {

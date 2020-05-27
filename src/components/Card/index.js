@@ -11,7 +11,7 @@ import {
 import { BsPlusCircle } from "react-icons/bs";
 
 export default function Card(props) {
-  const { item, badge } = props;
+  const { item, badge, addToCart } = props;
   return (
     <Container>
       <Header>
@@ -29,7 +29,7 @@ export default function Card(props) {
             | {item.unit}
           </span>
         </Description>
-        <Button type="button">
+        <Button type="button" onClick={addToCart}>
           <BsPlusCircle size={30} />
         </Button>
       </Content>
