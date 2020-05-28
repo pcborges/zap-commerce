@@ -1,19 +1,40 @@
 import React, { useContext } from "react";
+import { CartList, Item } from "./styles";
 
 import ShopContext from "../../context/shop-context";
+import { FiEdit, FiTrash2 } from "react-icons/fi";
 
 export default function Cart() {
   const context = useContext(ShopContext);
   return (
     <>
-      {context.cart.map((item) => (
-        <li key={item.id}>
-          {item.name} - Quantidade: {item.quantity} &nbsp;
-          <button onClick={() => context.removeProductFromCart(item.id)}>
-            Remover Produto
-          </button>
-        </li>
-      ))}
+      <h2>Carrinho</h2>
+      <hr />
+      <CartList>
+        {context.cart.map((item) => (
+          <Item key={item.id}>
+            <div className="product">
+              <img src={item.imgPath} alt={item.name} />
+              <h4>{item.name}</h4>
+              <span>
+                {item.quantity} {item.unit}
+              </span>
+            </div>
+            <div className="buttons">
+              <button onClick={() => context.removeProductFromCart(item.id)}>
+                <FiEdit size={20} />
+              </button>
+              <button
+                className="darker"
+                onClick={() => context.removeProductFromCart(item.id)}
+              >
+                <FiTrash2 size={20} />
+              </button>
+            </div>
+          </Item>
+        ))}
+      </CartList>
+      <button>Checkout</button>
     </>
   );
 }
