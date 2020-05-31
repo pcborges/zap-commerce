@@ -16,9 +16,20 @@ export default function Cart() {
             <div className="product">
               <img src={item.imgPath} alt={item.name} />
               <h4>{item.name}</h4>
-              <span>
-                {item.quantity} {item.unit}
-              </span>
+            </div>
+            <div className="quantity">
+              <input
+                type="number"
+                value={item.quantity}
+                onChange={(e) =>
+                  context.changeProductQuantity({
+                    id: item.id,
+                    quantity: e.target.value,
+                  })
+                }
+                id={item.id}
+              ></input>
+              <span>{item.unit}</span>
             </div>
             <div className="buttons">
               <button onClick={() => context.removeProductFromCart(item.id)}>

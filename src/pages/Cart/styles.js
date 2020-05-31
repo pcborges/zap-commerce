@@ -21,13 +21,22 @@ export const Item = styled.li`
   }
 
   .product {
-    flex: 1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: ${colors.grey};
     border-radius: 1.5rem 0 0 1.5rem;
     padding-left: 1rem;
+  }
+
+  .quantity {
+    flex: 1;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
   .buttons {
