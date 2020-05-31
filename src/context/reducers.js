@@ -28,45 +28,30 @@ const removeProductFromCart = (productId, state) => {
     (item) => item.id === productId
   );
 
-  const updatedItem = {
-    ...updatedCart[updatedItemIndex],
-  };
-
-  updatedItem.quantity--;
-  if (updatedItem.quantity <= 0) {
-    updatedCart.splice(updatedItemIndex, 1);
-  } else {
-    updatedCart[updatedItemIndex] = updatedItem;
-  }
+  updatedCart.splice(updatedItemIndex, 1);
 
   return { ...state, cart: updatedCart };
 };
 
 const changeProductQuantity = (product, state) => {
-  console.log(
-    "Alterando quantidade do produto com id: ",
-    product.id,
-    "quantidade",
-    product.quantity
-  );
+  console.log("Alterando quantidade do produto com id: ", product.id);
   const updatedCart = [...state.cart];
   const updatedItemIndex = updatedCart.findIndex(
     (item) => item.id === product.id
   );
 
-  console.log("updated item index", updatedItemIndex);
   const updatedItem = {
     ...updatedCart[updatedItemIndex],
   };
 
-  updatedItem.quantity = product.quantity;
-  if (updatedItem.quantity <= 0) {
-    updatedCart.splice(updatedItemIndex, 1);
+  // updatedCart.splice(updatedItemIndex, 1);
+  if (product.quantity < 0) {
+    updatedItem.quantity = 1;
+    updatedCart[updatedItemIndex] = updatedItem;
   } else {
+    updatedItem.quantity = product.quantity;
     updatedCart[updatedItemIndex] = updatedItem;
   }
-
-  console.log("Após Update", updatedCart);
 
   return { ...state, cart: updatedCart };
 };
@@ -78,7 +63,6 @@ export const shopReducer = (state, action) => {
     case REMOVE_PRODUCT:
       return removeProductFromCart(action.productId, state);
     case CHANGE_PRODUCT:
-      console.log(action.product);
       return changeProductQuantity(action.product, state);
     default:
       return state;

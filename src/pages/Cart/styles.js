@@ -31,12 +31,26 @@ export const Item = styled.li`
 
   .quantity {
     flex: 1;
-    border: none;
-    background-image: none;
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    background-color: ${colors.grey};
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2.5rem;
+
+    input {
+      border: none;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      max-width: 5rem;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: ${colors.dark};
+      text-align: right;
+    }
   }
 
   .buttons {
