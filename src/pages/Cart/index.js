@@ -24,7 +24,7 @@ export default function Cart() {
                 onChange={(e) =>
                   context.changeProductQuantity({
                     id: item.id,
-                    quantity: Number(e.target.value),
+                    quantity: e.target.value,
                   })
                 }
               ></input>

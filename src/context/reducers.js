@@ -28,7 +28,11 @@ const removeProductFromCart = (productId, state) => {
     (item) => item.id === productId
   );
 
-  updatedCart.splice(updatedItemIndex, 1);
+  if (updatedItemIndex < 0) {
+    console.log("Produto não encontrado no carrinho");
+  } else {
+    updatedCart.splice(updatedItemIndex, 1);
+  }
 
   return { ...state, cart: updatedCart };
 };
