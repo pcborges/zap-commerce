@@ -4,6 +4,8 @@ import { CartList, Item } from "./styles";
 import ShopContext from "../../context/shop-context";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 
+import { Link } from "react-router-dom";
+
 export default function Cart() {
   const context = useContext(ShopContext);
   return (
@@ -44,7 +46,7 @@ export default function Cart() {
           </Item>
         ))}
       </CartList>
-      <button>Checkout</button>
+      <Link to="/checkout">Checkout</Link>
     </>
   );
 }
