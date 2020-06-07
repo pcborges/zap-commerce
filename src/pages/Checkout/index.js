@@ -4,7 +4,7 @@ import useForm from "../../hooks/useForm";
 export default function Checkout() {
   const [values, handleChange, handleSubmit] = useForm();
   const nextStep = () => {
-    console.log("Dentro do nextStep", values);
+    console.log(values);
   };
   return (
     <>
@@ -17,6 +17,7 @@ export default function Checkout() {
             onChange={handleChange}
             placeholder="Informe seu nome"
             value={values.name}
+            required
           />
         </div>
         <div>
@@ -27,17 +28,18 @@ export default function Checkout() {
             onChange={handleChange}
             placeholder="Informe seu endereço"
             value={values.address}
+            required
           />
         </div>
         <div>
           <label>Observações</label>
-          <input
+          <textarea
             type="text"
             name="notes"
             onChange={handleChange}
             placeholder="Informe seu endereço"
             value={values.notes}
-          />
+          ></textarea>
         </div>
         <button type="submit">Próximo</button>
       </form>
